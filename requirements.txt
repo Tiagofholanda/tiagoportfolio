@@ -1,3 +1,7 @@
-streamlit
 pandas
 streamlit_lottie
+streamlit>=1.0
+pillow
+streamlit-lottie
+requests
+email-validator
