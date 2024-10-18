@@ -11,10 +11,10 @@ def load_lottie_url(url):
     return r.json()
 
 # Carregar animação Lottie
-lottie_animation = load_lottie_url("https://assets7.lottiefiles.com/private_files/lf30_dxgf5fxz.json")
+lottie_animation = load_lottie_url("https://assets1.lottiefiles.com/packages/lf20_3vbOcw.json")  # Usei uma animação Lottie alternativa
 
 # Configuração da página
-st.set_page_config(page_title="Portfólio de Tiago Holanda", page_icon=":earth_americas:", layout="wide")
+st.set_page_config(page_title="Portfólio de Tiago Holanda", page_icon="🌎", layout="wide")
 
 # Adicionar estilos CSS personalizados
 st.markdown("""
@@ -66,6 +66,11 @@ st.markdown("""
     .lottie {
         margin-top: 20px;
     }
+
+    /* Estilo para os ícones das redes sociais */
+    .icone-rede {
+        text-align: center;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -82,7 +87,7 @@ def mostrar_curriculo():
         st.markdown('<h2 class="subtitulo">Resumo Profissional</h2>', unsafe_allow_html=True)
         st.markdown("""
         <p class="texto">
-        Profissional com sólida experiência em Geografia e Ciências Geodésicas, atuando como especialista em **Geoprocessamento** e **Análise de Dados Geoespaciais**. Doutorando em Geografia pela **Universidade Federal Fluminense (UFF)**, com foco em aplicações avançadas de **GIS** e **tecnologias de geoinformação**. Possuo histórico comprovado no desenvolvimento de soluções **WebGIS**, integração de sistemas **CRM** e automatização de processos utilizando **Python**, **PyQt5** e **Streamlit**. Minha trajetória acadêmica e profissional reflete um compromisso contínuo com a inovação tecnológica e a excelência na análise espacial.
+        Profissional com sólida experiência em Geografia e Ciências Geodésicas, atuando como especialista em <strong>Geoprocessamento</strong> e <strong>Análise de Dados Geoespaciais</strong>. Doutorando em Geografia pela <strong>Universidade Federal Fluminense (UFF)</strong>, com foco em aplicações avançadas de <strong>GIS</strong> e <strong>tecnologias de geoinformação</strong>. Possuo histórico comprovado no desenvolvimento de soluções <strong>WebGIS</strong>, integração de sistemas <strong>CRM</strong> e automatização de processos utilizando <strong>Python</strong>, <strong>PyQt5</strong> e <strong>Streamlit</strong>. Minha trajetória acadêmica e profissional reflete um compromisso contínuo com a inovação tecnológica e a excelência na análise espacial.
         </p>
         """, unsafe_allow_html=True)
     
@@ -180,27 +185,6 @@ def mostrar_contato():
 
     if submit_button:
         st.success("Mensagem enviada com sucesso!")
-    
-st.markdown('<h2 class="subtitulo">Redes e Perfis</h2>', unsafe_allow_html=True)
-col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
-
-with col1:
-    st.markdown('📚 [Google Acadêmico](https://scholar.google.com.br/citations?user=XLu_qAIAAAAJ&hl=pt-BR)')
-with col2:
-    st.markdown('<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20"/> [LinkedIn](https://www.linkedin.com/in/tiagofholanda)', unsafe_allow_html=True)
-with col3:
-    st.markdown('🐱 [GitHub](https://github.com/tiagofholanda)')
-with col4:
-    st.markdown('📄 [Lattes](http://lattes.cnpq.br/K8557733H3)')
-with col5:
-    st.markdown('🧑‍🔬 [ResearchGate](https://www.researchgate.net/profile/Tiago_Holanda)')
-with col6:
-    st.markdown('🎓 [Researchers](https://publons.com/researcher/3962699/tiago-holanda/)')
-with col7:
-    st.markdown('🌐 [ORCID](https://orcid.org/0000-0001-6898-5027)')
-with col8:
-    st.markdown('🔬 [Scopus](https://www.scopus.com/authid/detail.uri?authorId=57376293300)')
-
 
 # Navegação usando barra lateral
 st.sidebar.title("Navegação")
@@ -211,7 +195,7 @@ if selection == "Início":
     st.markdown('<h1 class="titulo-principal">Bem-vindo ao meu Portfólio!</h1>', unsafe_allow_html=True)
     st.markdown("""
     <p class="texto">
-    Sou **Tiago Holanda**, especialista em Geoprocessamento e Análise de Dados Geoespaciais. Este portfólio apresenta minha trajetória profissional, projetos desenvolvidos e formas de contato. Sinta-se à vontade para explorar e conhecer mais sobre meu trabalho.
+    Sou <strong>Tiago Holanda</strong>, especialista em Geoprocessamento e Análise de Dados Geoespaciais. Este portfólio apresenta minha trajetória profissional, projetos desenvolvidos e formas de contato. Sinta-se à vontade para explorar e conhecer mais sobre meu trabalho.
     </p>
     """, unsafe_allow_html=True)
     st.image("https://avatars.githubusercontent.com/u/111590174?v=4", width=300)
@@ -220,6 +204,27 @@ if selection == "Início":
     st.markdown('<div class="lottie">', unsafe_allow_html=True)
     st_lottie(lottie_animation, height=300)
     st.markdown('</div>', unsafe_allow_html=True)
+
+    # Redes e Perfis com Colunas (apenas na página inicial)
+    st.markdown('<h2 class="subtitulo">Redes e Perfis</h2>', unsafe_allow_html=True)
+    cols = st.columns(8)
+    redes = [
+        ('📚', 'Google Acadêmico', 'https://scholar.google.com.br/citations?user=XLu_qAIAAAAJ&hl=pt-BR'),
+        ('<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20"/>', 'LinkedIn', 'https://www.linkedin.com/in/tiagofholanda'),
+        ('🐱', 'GitHub', 'https://github.com/tiagofholanda'),
+        ('📄', 'Lattes', 'http://lattes.cnpq.br/K8557733H3'),
+        ('🧑‍🔬', 'ResearchGate', 'https://www.researchgate.net/profile/Tiago_Holanda'),
+        ('🎓', 'Researchers', 'https://publons.com/researcher/3962699/tiago-holanda/'),
+        ('🌐', 'ORCID', 'https://orcid.org/0000-0001-6898-5027'),
+        ('🔬', 'Scopus', 'https://www.scopus.com/authid/detail.uri?authorId=57376293300')
+    ]
+
+    for idx, (icone, nome, link) in enumerate(redes):
+        with cols[idx]:
+            if 'img' in icone:
+                st.markdown(f'<div class="icone-rede">{icone}<br/><a href="{link}" target="_blank">{nome}</a></div>', unsafe_allow_html=True)
+            else:
+                st.markdown(f'<div class="icone-rede">{icone}<br/><a href="{link}" target="_blank">{nome}</a></div>', unsafe_allow_html=True)
 
 elif selection == "Currículo":
     mostrar_curriculo()
