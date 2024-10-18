@@ -182,18 +182,25 @@ def mostrar_contato():
         st.success("Mensagem enviada com sucesso!")
     
 st.markdown('<h2 class="subtitulo">Redes e Perfis</h2>', unsafe_allow_html=True)
-st.markdown("""
-<ul class="texto">
-    <li>📚 <a href="https://scholar.google.com.br/citations?user=XLu_qAIAAAAJ&hl=pt-BR" target="_blank">Google Acadêmico</a></li>
-    <li>🔗 <a href="https://www.linkedin.com/in/tiagofholanda" target="_blank">LinkedIn</a></li>
-    <li>🐱 <a href="https://github.com/tiagofholanda" target="_blank">GitHub</a></li>
-    <li>📄 <a href="http://lattes.cnpq.br/K8557733H3" target="_blank">Lattes</a></li>
-    <li>🧑‍🔬 <a href="https://www.researchgate.net/profile/Tiago_Holanda" target="_blank">ResearchGate</a></li>
-    <li>🎓 <a href="https://publons.com/researcher/3962699/tiago-holanda/" target="_blank">Researchers</a></li>
-    <li>🌐 <a href="https://orcid.org/0000-0001-6898-5027" target="_blank">ORCID</a></li>
-    <li>🔬 <a href="https://www.scopus.com/authid/detail.uri?authorId=57376293300" target="_blank">Scopus</a></li>
-</ul>
-""", unsafe_allow_html=True)
+col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
+
+with col1:
+    st.markdown('📚 [Google Acadêmico](https://scholar.google.com.br/citations?user=XLu_qAIAAAAJ&hl=pt-BR)')
+with col2:
+    st.markdown('<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20"/> [LinkedIn](https://www.linkedin.com/in/tiagofholanda)', unsafe_allow_html=True)
+with col3:
+    st.markdown('🐱 [GitHub](https://github.com/tiagofholanda)')
+with col4:
+    st.markdown('📄 [Lattes](http://lattes.cnpq.br/K8557733H3)')
+with col5:
+    st.markdown('🧑‍🔬 [ResearchGate](https://www.researchgate.net/profile/Tiago_Holanda)')
+with col6:
+    st.markdown('🎓 [Researchers](https://publons.com/researcher/3962699/tiago-holanda/)')
+with col7:
+    st.markdown('🌐 [ORCID](https://orcid.org/0000-0001-6898-5027)')
+with col8:
+    st.markdown('🔬 [Scopus](https://www.scopus.com/authid/detail.uri?authorId=57376293300)')
+
 
 # Navegação usando barra lateral
 st.sidebar.title("Navegação")
