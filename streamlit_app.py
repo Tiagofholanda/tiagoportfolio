@@ -168,7 +168,6 @@ def mostrar_contato():
     # Informações de contato
     st.markdown("""
     <ul class="texto">
-        <li><strong>WhatsApp:</strong> (81) 99667-4681</li>
         <li><strong>E-mail:</strong> tfholanda@gmail.com / tiagofholanda@hotmail.com</li>
     </ul>
     """, unsafe_allow_html=True)
