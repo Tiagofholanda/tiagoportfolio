@@ -76,8 +76,8 @@ def mostrar_curriculo():
     # Layout com imagem e resumo
     col1, col2 = st.columns([1, 2])
     with col1:
-        image = Image.open("data/minha_foto.jpg")
-        st.image(image, width=250)
+        # Carregar imagem a partir da URL
+        st.image("https://avatars.githubusercontent.com/u/111590174?v=4", width=250)
     with col2:
         st.markdown('<h2 class="subtitulo">Resumo Profissional</h2>', unsafe_allow_html=True)
         st.markdown("""
@@ -181,20 +181,19 @@ def mostrar_contato():
     if submit_button:
         st.success("Mensagem enviada com sucesso!")
     
-    # Links para perfis
-    st.markdown('<h2 class="subtitulo">Redes e Perfis</h2>', unsafe_allow_html=True)
-    st.markdown("""
-    <ul class="texto">
-        <li><a href="https://scholar.google.com.br/citations?user=XLu_qAIAAAAJ&hl=pt-BR" target="_blank">Google Acadêmico</a></li>
-        <li><a href="https://www.linkedin.com/in/tiagofholanda" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/tiagofholanda" target="_blank">GitHub</a></li>
-        <li><a href="http://lattes.cnpq.br/K8557733H3" target="_blank">Lattes</a></li>
-        <li><a href="https://www.researchgate.net/profile/Tiago_Holanda" target="_blank">ResearchGate</a></li>
-        <li><a href="https://publons.com/researcher/3962699/tiago-holanda/" target="_blank">Researchers</a></li>
-        <li><a href="https://orcid.org/0000-0001-6898-5027" target="_blank">ORCID</a></li>
-        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57376293300" target="_blank">Scopus</a></li>
-    </ul>
-    """, unsafe_allow_html=True)
+st.markdown('<h2 class="subtitulo">Redes e Perfis</h2>', unsafe_allow_html=True)
+st.markdown("""
+<ul class="texto">
+    <li>📚 <a href="https://scholar.google.com.br/citations?user=XLu_qAIAAAAJ&hl=pt-BR" target="_blank">Google Acadêmico</a></li>
+    <li>🔗 <a href="https://www.linkedin.com/in/tiagofholanda" target="_blank">LinkedIn</a></li>
+    <li>🐱 <a href="https://github.com/tiagofholanda" target="_blank">GitHub</a></li>
+    <li>📄 <a href="http://lattes.cnpq.br/K8557733H3" target="_blank">Lattes</a></li>
+    <li>🧑‍🔬 <a href="https://www.researchgate.net/profile/Tiago_Holanda" target="_blank">ResearchGate</a></li>
+    <li>🎓 <a href="https://publons.com/researcher/3962699/tiago-holanda/" target="_blank">Researchers</a></li>
+    <li>🌐 <a href="https://orcid.org/0000-0001-6898-5027" target="_blank">ORCID</a></li>
+    <li>🔬 <a href="https://www.scopus.com/authid/detail.uri?authorId=57376293300" target="_blank">Scopus</a></li>
+</ul>
+""", unsafe_allow_html=True)
 
 # Navegação usando barra lateral
 st.sidebar.title("Navegação")
@@ -208,8 +207,7 @@ if selection == "Início":
     Sou **Tiago Holanda**, especialista em Geoprocessamento e Análise de Dados Geoespaciais. Este portfólio apresenta minha trajetória profissional, projetos desenvolvidos e formas de contato. Sinta-se à vontade para explorar e conhecer mais sobre meu trabalho.
     </p>
     """, unsafe_allow_html=True)
-    image = Image.open("data/minha_foto.jpg")
-    st.image(image, width=300)
+    st.image("https://avatars.githubusercontent.com/u/111590174?v=4", width=300)
 
     # Animação Lottie
     st.markdown('<div class="lottie">', unsafe_allow_html=True)
