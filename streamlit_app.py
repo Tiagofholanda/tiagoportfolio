@@ -61,6 +61,11 @@ st.markdown("""
         text-align: justify;
     }
 
+    /* Estilo para listas */
+    ul.texto li {
+        margin-bottom: 10px;
+    }
+
     /* Estilo para links */
     a, a:hover, a:visited {
         color: var(--primary-color);
@@ -188,52 +193,118 @@ def mostrar_curriculo():
         st.markdown('<h2 class="subtitulo">Resumo Profissional</h2>', unsafe_allow_html=True)
         st.markdown("""
         <p class="texto">
-        Doutorando em Geografia pela <strong>Universidade Federal Fluminense (UFF)</strong>, desenvolvendo pesquisas no <strong>Laboratório de Geografia Física (LAGEF - UFF)</strong>, no <strong>H2O - Grupo de Pesquisa em Hidrodinâmica, Hidráulica e Oceanografia</strong>, e no <strong>Laboratório de Cartografia Costeira (LACCOST)</strong>. Possuo Mestrado em Ciências Geodésicas e Tecnologias da Geoinformação pela <strong>UFPE</strong> e Graduação em Geografia também pela <strong>UFPE</strong>, onde atuei no Centro de Filosofia e Ciências Humanas-CFCH, no Departamento de Ciência Geográfica.
+            Profissional com sólida experiência em Geografia e Ciências Geodésicas, atuando como especialista em Geoprocessamento e Análise de Dados Geoespaciais. Doutorando em Geografia pela Universidade Federal Fluminense (UFF), com foco em aplicações avançadas de GIS e tecnologias de geoinformação.
         </p>
         <p class="texto">
-        Minhas áreas de atuação incluem:
-        </p>
-        <ul class="texto">
-            <li>Geomorfologia Costeira e Dinâmica Costeira</li>
-            <li>Morfodinâmica Costeira e monitoramento geodésico da linha de costa SIG</li>
-            <li>Erosão e proteção Costeira</li>
-            <li>Geoprocessamento e sensoriamento remoto com Drones em áreas costeiras</li>
-        </ul>
-        <p class="texto">
-        Também faço parte do corpo editorial e sou revisor de revistas científicas como a <strong>Revista Brasileira de Meio Ambiente (RVBMA)</strong>, <strong>Revista Brasileira de Sensoriamento Remoto (RBSR)</strong> e outras.
+            Possuo histórico comprovado no desenvolvimento de soluções WebGIS e na integração de sistemas de automatização de processos utilizando Python, R, PyQt5 e Streamlit. Experiência em aerofotogrametria com drones e análises espaciais e temporais complexas. Minha trajetória acadêmica e profissional reflete um compromisso contínuo com a inovação tecnológica e a excelência na análise espacial, abrangendo um amplo espectro de tecnologias GIS e aplicações geoespaciais avançadas.
         </p>
         """, unsafe_allow_html=True)
-    
-    # Formação Acadêmica
-    st.markdown('<h2 class="subtitulo">Formação Acadêmica</h2>', unsafe_allow_html=True)
-    st.markdown("""
-    <ul class="texto">
-        <li><strong>Doutorado em Geografia</strong> - Universidade Federal Fluminense (UFF)</li>
-        <li><strong>Mestrado em Ciências Geodésicas e Tecnologias da Geoinformação</strong> - Universidade Federal de Pernambuco (UFPE)</li>
-        <li><strong>Licenciatura em Geografia</strong> - Universidade Federal de Pernambuco (UFPE)</li>
-        <li><strong>Especialização em Georreferenciamento</strong></li>
-        <li><strong>Técnico em Geoprocessamento e Agrimensura</strong></li>
-    </ul>
-    """, unsafe_allow_html=True)
     
     # Experiência Profissional
     st.markdown('<h2 class="subtitulo">Experiência Profissional</h2>', unsafe_allow_html=True)
     st.markdown("""
     <ul class="texto">
-        <li><strong>Especialista em GIS</strong> - NMC (2024 - Presente)
-            <ul>
-                <li>Desenvolvimento de soluções WebGIS aplicadas ao setor ambiental e consultoria.</li>
-                <li>Integração de mapas interativos com sistemas CRM para otimizar processos empresariais.</li>
-                <li>Automatização de fluxos de trabalho utilizando Python, PyQt5 e Streamlit.</li>
-            </ul>
+        <li><strong>NMC Integrativa</strong><br>
+            <strong>Função:</strong> Especialista de Geoprocessamento / Coordenação de Projetos<br>
+            <strong>Período:</strong> 04/06/2024 - Presente
         </li>
-        <li><strong>Analista GEO e Planejamento Sênior</strong> - Fundação Renova
-            <ul>
-                <li>Responsável por projetos de planejamento e análise espacial para recuperação ambiental.</li>
-                <li>Atuação nos programas 07 e 08, focados na recuperação produtiva e econômica de famílias afetadas.</li>
-            </ul>
+        <li><strong>RAC Soluções Ambientais</strong><br>
+            <strong>Função:</strong> Analista de Planejamento / Geoprocessamento Pleno / Coordenador de Campo<br>
+            <strong>Período:</strong> 10/03/2023 até 27/05/2024<br>
+            <strong>Atuação:</strong> Prestação de serviço para a Fundação Renova nos programas 07 e 08 no reassentamento familiar.
+        </li>
+        <li><strong>Empresa Caroá Topografia e Agrimensura</strong><br>
+            <strong>Função:</strong> Prestador de Serviço Técnico-Científico<br>
+            <strong>Período:</strong> 30/06/2021 até 10/03/2023
+        </li>
+        <li><strong>Fundação Universidade de Pernambuco (UPE)</strong><br>
+            <strong>Função:</strong> Professor do Departamento de Geografia<br>
+            <strong>Disciplinas Ministradas:</strong> Cartografia, Geotecnologias, Climatologia, Biogeografia, Geopolítica<br>
+            <strong>Período:</strong> 10/02/2021 até 19/07/2022
+        </li>
+        <li><strong>Secretaria de Educação e Esporte de Pernambuco</strong><br>
+            <strong>Função:</strong> Professor de Geografia<br>
+            <strong>Período:</strong> 01/10/2021 até 15/07/2022
+        </li>
+        <li><strong>Município do Cabo de Santo Agostinho</strong><br>
+            <strong>Função:</strong> Professor de Geografia<br>
+            <strong>Período:</strong> 15/08/2019 até 30/12/2020
+        </li>
+        <li><strong>Corpo Técnico de Perícia Ambiental no Município de Ipojuca-PE</strong><br>
+            <strong>Período:</strong> Março/2021 até Abril/2021
         </li>
     </ul>
+    """, unsafe_allow_html=True)
+    
+    # Projetos e Pesquisas
+    st.markdown('<h2 class="subtitulo">Projetos e Pesquisas</h2>', unsafe_allow_html=True)
+    st.markdown("""
+    <ul class="texto">
+        <li><strong>Universidade Federal de Pernambuco (UFPE)</strong><br>
+            <strong>Projeto PELDTAMS:</strong> Monitoramento anual de praia utilizando Drone e GNSS para levantamento e comparação de produtos.<br>
+            <strong>Período:</strong> Junho/2017 até o presente
+        </li>
+        <li><strong>Projeto de Doutorado em Ponta de Pedra - PE:</strong> Monitoramento da praia com GNSS e Drone.<br>
+            <strong>Período:</strong> Agosto/2017 até Agosto/2018
+        </li>
+        <li><strong>Monitoramento da Caatinga em Itacuruba-PE utilizando Drone.</strong><br>
+            <strong>Período:</strong> Fevereiro de 2019
+        </li>
+        <li><strong>Projeto de Mestrado:</strong> Monitoramento da Praia do Paiva – PE usando GNSS e Drone.
+        </li>
+        <li><strong>Monitoramento com Drone na Reserva Biológica Ilha Atol das Rocas, Oceano Atlântico.</strong><br>
+            <strong>Período:</strong> Janeiro de 2020 até 2023
+        </li>
+    </ul>
+    """, unsafe_allow_html=True)
+    
+    # Competências Técnicas
+    st.markdown('<h2 class="subtitulo">Competências Técnicas</h2>', unsafe_allow_html=True)
+    
+    st.markdown("""
+    <h3>Softwares de Processamento e Modelagem:</h3>
+    <ul class="texto">
+        <li>Agisoft Photoscan e Metashape</li>
+        <li>Pix4D Mapper</li>
+        <li>Bentley Systems</li>
+        <li>Trimble Business Center (64-bit)</li>
+        <li>GTR Processor</li>
+        <li>TOPCOM</li>
+    </ul>
+    
+    <h3>Sistemas de Informação Geográfica (GIS):</h3>
+    <ul class="texto">
+        <li>ArcGIS Desktop, ArcGIS Online, ArcGIS Pro, ArcGIS Apps</li>
+        <li>QGIS</li>
+        <li>Global Mapper</li>
+    </ul>
+    
+    <h3>Modelagem Costeira:</h3>
+    <ul class="texto">
+        <li>DELFT 3D</li>
+        <li>XBEACH</li>
+        <li>SMC – Sistema de Modelagem Costeira</li>
+    </ul>
+    
+    <h3>Linguagens e Ferramentas de Programação:</h3>
+    <ul class="texto">
+        <li>Python (básico)</li>
+        <li>R (básico)</li>
+        <li>HTML5 e JavaScript (noções)</li>
+    </ul>
+    
+    <h3>Tecnologias de Sensoriamento Remoto e Topografia:</h3>
+    <ul class="texto">
+        <li>Experiência em mapeamento com drones (RPAS)</li>
+        <li>GNSS</li>
+        <li>Sensoriamento Remoto aplicado a ambientes costeiros</li>
+    </ul>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    <p class="texto">
+        Minha trajetória acadêmica e profissional reflete um compromisso contínuo com a inovação tecnológica e a excelência na análise espacial, abrangendo um amplo espectro de tecnologias GIS e aplicações geoespaciais avançadas.
+    </p>
     """, unsafe_allow_html=True)
 
 # Função para Portfólio
