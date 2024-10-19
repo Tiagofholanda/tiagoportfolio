@@ -5,3 +5,5 @@ pillow
 streamlit-lottie
 requests
 email-validator
+python-dotenv
+
