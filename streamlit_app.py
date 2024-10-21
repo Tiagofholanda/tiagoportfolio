@@ -358,7 +358,7 @@ def mostrar_portfolio():
         {
             "titulo": "Dashboard Interativo para Análise de Desempenho",
             "descricao": "Criação de dashboards interativos utilizando Streamlit e Plotly para visualização de KPIs e métricas de desempenho em tempo real.",
-            "imagem": "https://via.placeholder.com/300x200.png?text=Projeto+3"
+            "imagem": "./Imagem/1.png"
         }
     ]
     
