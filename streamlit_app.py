@@ -167,7 +167,7 @@ links_profissionais = [
     {'icon': '<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="40"/>', 'label': 'GitHub', 'url': 'https://github.com/tiagofholanda'},
     {'icon': '<img src="https://lattes.cnpq.br/image/layout_set_logo?img_id=1311768&t=1729293336662" width="40"/>', 'label': 'Lattes', 'url': 'http://lattes.cnpq.br/4969639760120080'},
     {'icon': '<img src="https://c5.rgstatic.net/m/419438641133902/images/icons/svgicons/new-index-logo.svg" width="40"/>', 'label': 'ResearchGate', 'url': 'https://www.researchgate.net/profile/Tiago_Holanda'},
-    {'icon': '<img src="https://www.freepnglogos.com/uploads/publons-logo-transparent-png-30.png" width="80"/>', 'label': 'Publons', 'url': 'https://publons.com/researcher/3962699/tiago-holanda/'},
+    {'icon': '<img src="https://www.pikpng.com/pngl/m/424-4243430_reviewers-for-these-journals-can-track-verify-and.png" width="80"/>', 'label': 'Publons', 'url': 'https://publons.com/researcher/3962699/tiago-holanda/'},
     {'icon': '<img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="40"/>', 'label': 'ORCID', 'url': 'https://orcid.org/0000-0001-6898-5027'},
     {'icon': '<img src="https://cdn-icons-png.flaticon.com/512/3313/3313487.png" width="80"/>', 'label': 'Scopus', 'url': 'https://www.scopus.com/authid/detail.uri?authorId=57376293300'},
 ]
