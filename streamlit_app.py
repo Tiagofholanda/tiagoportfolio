@@ -369,6 +369,18 @@ def mostrar_portfolio():
         st.markdown(f"<p class='texto'>{projeto['descricao']}</p>", unsafe_allow_html=True)
         st.markdown("<hr>", unsafe_allow_html=True)
 
+        # Slideshow para o projeto "Dashboard Interativo"
+    if projeto['titulo'] == "Dashboard Interativo para Análise de Desempenho":
+        imagens_slideshow = [
+            "./Imagem/1.png",
+            "./Imagem/2.png",  # Adicione mais imagens conforme necessário
+        ]
+        
+        # Loop para exibir imagens do slideshow
+        for imagem in imagens_slideshow:
+            st.image(imagem, use_column_width=True)
+            time.sleep(2)  # Espera 2 segundos antes de passar para a próxima imagem
+
 # Função para Contato
 def mostrar_contato():
     """
