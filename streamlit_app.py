@@ -169,7 +169,7 @@ links_profissionais = [
     {'icon': '<img src="https://c5.rgstatic.net/m/419438641133902/images/icons/svgicons/new-index-logo.svg" width="40"/>', 'label': 'ResearchGate', 'url': 'https://www.researchgate.net/profile/Tiago_Holanda'},
     {'icon': '<img src="https://www.pikpng.com/pngl/m/424-4243430_reviewers-for-these-journals-can-track-verify-and.png" width="80"/>', 'label': 'Publons', 'url': 'https://publons.com/researcher/3962699/tiago-holanda/'},
     {'icon': '<img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="40"/>', 'label': 'ORCID', 'url': 'https://orcid.org/0000-0001-6898-5027'},
-    {'icon': '<img src="https://cdn-icons-png.flaticon.com/512/3313/3313487.png" width="80"/>', 'label': 'Scopus', 'url': 'https://www.scopus.com/authid/detail.uri?authorId=57376293300'},
+    {'icon': '<img src="https://www.elsevier.com/images/elsevier-logo.svg" width="80"/>', 'label': 'Scopus', 'url': 'https://www.scopus.com/authid/detail.uri?authorId=57376293300'},
 ]
 
 # Função para Currículo
