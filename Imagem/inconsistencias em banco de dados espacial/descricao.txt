@@ -1,0 +1,38 @@
+RELATÓRIO: INCONSISTÊNCIAS EM BANCO DE DADOS ESPACIAL
+
+📊 Panorama Geral
+• 1.567 registros totais no banco espacial.
+• 81% de consistência: base sólida, mas com oportunidades de melhoria.
+
+⚠️ Principais Inconsistências
+1. Problemas críticos:
+   - 299 registros inconsistentes (19%).
+   - 160 elementos sem área mapeada (falha de georreferência).
+   - 161 registros sem ortofoto.
+   - 12 ocorrências sem foto.
+2. Alertas cartográficos:
+   - 7 ortofotos com mais de 6 meses (risco de desatualização).
+
+✅ Pontos Positivos
+• 1.268 registros consistentes.
+• 1.407 registros com área mapeada.
+• 1.555 registros com fotos.
+• 0 problemas de link WEBSIS (integração estável).
+
+🔄 Sincronização entre Bancos
+• Banco local (techdengue): 1.494 registros.
+• Banco externo (dados_geograficos): 1.509 registros.
+• Diferença de 15 registros — harmonização necessária.
+
+🛠️ Recomendações Técnicas
+Ações imediatas:
+1. Mapear áreas faltantes (160 registros).
+2. Atualizar 7 ortofotos antigas.
+3. Conciliar discrepância entre bancos (15 registros).
+4. Completar documentação visual dos 12 registros sem foto.
+
+Melhoria contínua:
+• Validação automática na ingestão.
+• Política de atualização cartográfica trimestral.
+• Dashboard de monitoramento da qualidade.
+• Rotinas de sincronização automática entre bancos.

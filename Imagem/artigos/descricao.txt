@@ -1,0 +1,28 @@
+Pesquisador e profissional com ampla experiência em monitoramento costeiro, integrando técnicas de aerofotogrametria com drones (RPAS), GNSS e sensoriamento remoto para análise de processos costeiros. Atuo em projetos que envolvem geomorfologia, erosão e dinâmica sedimentar, conduzindo todo o fluxo de trabalho: captura em campo, processamento (Agisoft Metashape, Pix4D, WebODM) e interpretação de dados geoespaciais.
+
+FORMAÇÃO
+• Doutorado em Geografia (UFF) – Morfologia de praia e dunas expostas a ventos bidirecionais e tempestades.
+• Mestrado em Ciências Geodésicas e Tecnologias da Geoinformação (UFPE) – Mapeamento morfodinâmico da Praia do Paiva-PE.
+• Graduação em Geografia (UFPE).
+
+COMPETÊNCIAS TÉCNICAS
+• Geotecnologias: Aerofotogrametria com drones, GNSS, Sensoriamento Remoto óptico e radar, SIG (ArcGIS, QGIS).
+• Processamento: Agisoft Metashape, Pix4D, WebODM, AutoCAD Civil 3D.
+• Análises: Modelagem 3D, ortomosaicos, MDT/MDS, cálculos de volumes, séries temporais.
+• Programação: R para Geociências.
+• Idiomas: Português (nativo), Espanhol e Inglês (leitura).
+
+EXPERIÊNCIA
+• Especialista GIS | NMC Integrativa (2024–Atual) – gestão de dados geoespaciais.
+• Analista de Geoprocessamento | RAC Engenharia (2023–2024) – processamento de dados de drones.
+• Consultor Técnico | Caroá Topografia (2020–2024) – topografia e aerolevantamentos.
+• Pesquisador | LAGEF-UFF, H2O e LACCOST – dinâmica costeira e geofísica.
+
+PROJETOS DESTAQUE
+• MADEPD (UFF), PELD-Tamandaré, Atol das Rocas.
+
+PRODUÇÃO
+• 19 artigos em periódicos, 55 citações no Google Scholar, atuação como editor e revisor.
+
+CAPACITAÇÕES
+• Aerofotogrametria aplicada à cartografia (UFPE), Programação em R para Geociências (UFF), Técnico em Geoprocessamento (IFSULDEMINAS).

@@ -1,0 +1,33 @@
+Análise do Sistema de Gestão de Atividades e Quadras
+
+🎯 Visão Geral
+Sistema integrado para gestão territorial com foco em atividades e quadras, combinando banco de dados espacial, módulos temáticos e interface web. Voltado para gerenciamento georreferenciado e acompanhamento detalhado de operações.
+
+🗂️ Estrutura
+• Módulo D'Atividades: cadastro e importação em lote de atividades (ATV...), log para auditoria, classificação de materiais/resíduos (póvoa/csomba, plásticos, tábuas, entulho etc.).
+• Módulo D'Anédoise: gerenciamento de quadras territoriais, visualização em mapa, associação entre quadras e atividades, importação de dados espaciais.
+
+🗺️ Componente Espacial
+• Visualização de quadras sobre mapa web.
+• Associação de coordenadas geográficas e validação de dados.
+• Geração de mapas temporários (mapa_temp.html) para análise rápida.
+
+📊 Fluxo de Trabalho
+1. Importação de dados (Excel/TF).
+2. Processamento e conversão.
+3. Associação espacial com quadras.
+4. Visualização em interface web.
+5. Análise e gestão com relatórios.
+
+🔧 Tecnologias
+• Banco relacional com extensões espaciais.
+• Camadas web baseadas em HTML/JS.
+• Mecanismos de importação e limpeza.
+• Renderização de mapas web-based.
+
+💼 Aplicações
+• Gestão municipal de territórios.
+• Controle de atividades de limpeza/coleta.
+• Monitoramento de quadras urbanas.
+• Planejamento de serviços públicos.
+• Auditoria operacional georreferenciada.
