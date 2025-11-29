@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pandas>=2.0.0
 streamlit>=1.28.0
 streamlit-lottie>=0.0.5
@@ -7,4 +8,12 @@ email-validator>=2.1.0
 python-dotenv>=1.0.0
 plotly>=5.17.0
 
+=======
+streamlit==1.51.0
+streamlit-lottie==0.0.5
+pillow==12.0.0
+requests==2.32.5
+email-validator==2.3.0
+python-dotenv==1.2.1
+>>>>>>> 3bb9908a7b5f858da28646e4bd134c995d096ecb
 
