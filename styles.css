@@ -1,0 +1,238 @@
+/* Importando font Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #00acc1;
+    --text-color: #262730;
+    --background-color: #ffffff;
+    --secondary-bg: #f0f2f6;
+    --border-color: #e0e0e0;
+    --success-color: #00c853;
+    --warning-color: #ffb300;
+    --error-color: #d32f2f;
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #1e88e5;
+        --secondary-color: #26c6da;
+        --text-color: #e0e0e0;
+        --background-color: #1e1e1e;
+        --secondary-bg: #2d2d2d;
+        --border-color: #404040;
+    }
+}
+
+html, body, [class*="css"] {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Typography */
+.titulo-principal {
+    font-size: clamp(1.8em, 5vw, 2.5em);
+    color: var(--text-color);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.subtitulo {
+    font-size: clamp(1.4em, 4vw, 2em);
+    color: var(--text-color);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.texto {
+    font-size: clamp(0.95em, 2vw, 1.1em);
+    color: var(--text-color);
+    text-align: justify;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+/* Lists */
+ul.texto {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.texto li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+ul.texto li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Links */
+a, a:hover, a:visited {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Forms */
+.formulario {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0;
+}
+
+/* Lottie Animations */
+.lottie {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Social Icons */
+.icone-rede {
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.icone-rede a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--secondary-bg);
+    transition: all 0.3s ease;
+}
+
+.icone-rede a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.icone-rede img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* Buttons */
+.stButton > button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+/* Input Fields */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    border-radius: 8px;
+    border: 1px solid var(--border-color) !important;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .titulo-principal {
+        font-size: 1.8em;
+    }
+    
+    .subtitulo {
+        font-size: 1.3em;
+    }
+    
+    .formulario {
+        padding: 1rem;
+    }
+    
+    .icone-rede {
+        gap: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .titulo-principal {
+        font-size: 2.2em;
+    }
+    
+    .subtitulo {
+        font-size: 1.8em;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stColumn {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Success/Error Messages */
+.stSuccess {
+    border-left: 4px solid var(--success-color) !important;
+    background-color: rgba(0, 200, 83, 0.1) !important;
+}
+
+.stError {
+    border-left: 4px solid var(--error-color) !important;
+    background-color: rgba(211, 47, 47, 0.1) !important;
+}
+
+.stWarning {
+    border-left: 4px solid var(--warning-color) !important;
+    background-color: rgba(255, 179, 0, 0.1) !important;
+}
+
+/* HR */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+    margin: 2rem 0;
+}

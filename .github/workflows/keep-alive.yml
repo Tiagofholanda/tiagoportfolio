@@ -1,0 +1,19 @@
+name: Keep Alive
+
+on:
+  schedule:
+    # Executa a cada 6 horas para manter o dyno/app ativo
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping site para manter ativo
+        run: |
+          curl -X GET https://tiagoportfolio.streamlit.app/ \
+            -H "User-Agent: KeepAlive-Bot" \
+            -H "Cache-Control: no-cache" \
+            --connect-timeout 10 \
+            --max-time 30 || true

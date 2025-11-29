@@ -3,10 +3,12 @@ from PIL import Image
 from streamlit_lottie import st_lottie
 import requests
 import smtplib
+import time
+import logging
 from email.message import EmailMessage
-import os  # Para variáveis de ambiente
-from email_validator import validate_email, EmailNotValidError  # Validação de e-mail
-from dotenv import load_dotenv  # Para carregar variáveis de ambiente do .env
+import os
+from email_validator import validate_email, EmailNotValidError
+from dotenv import load_dotenv
 
 # Carregar variáveis de ambiente do arquivo .env
 load_dotenv()
@@ -204,9 +206,34 @@ def mostrar_curriculo():
     <ul class="texto">
     <li style="display: flex; justify-content: flex-start; align-items: center;">
         <div>
+            <strong>UFABC - Universidade Federal do ABC</strong><br>
+            <strong>Função:</strong> Tutor e Professor da Especialização de Geoprocessamento<br>
+            <strong>Atuação:</strong> Orientação de TCC da pós-graduação e tutoria nas disciplinas específicas da pós-graduação, oferecendo auxílio e realizando acompanhamento das disciplinas.<br>
+            <strong>Período:</strong> 10/07/2023 até 01/08/2025
+        </div>
+    </li>
+    <li style="display: flex; justify-content: flex-start; align-items: center;">
+        <div>
+            <strong>DEVGIS</strong><br>
+            <strong>Função:</strong> Desenvolvedor WebGIS / Especialista de Geoprocessamento<br>
+            <strong>Atuação:</strong> Desenvolvimento de aplicações WebGIS customizadas utilizando React integrado com Mapbox GL JS. Implementação de funcionalidades de mapas interativos para visualização e análise de dados geoespaciais em tempo real. Criação e consumo de APIs RESTful para serviços de geocodificação e processamento de dados espaciais. Otimização de performance de aplicações web com grandes volumes de dados vetoriais e raster. Integração de bancos de dados espaciais (PostGIS) com frontend mapping. Desenvolvimento de componentes reutilizáveis para biblioteca interna de mapeamento. Colaboração com equipes de UX/UI para criação de interfaces intuitivas.<br>
+            <strong>Período:</strong> 10/02/2024 até 01/10/2025
+        </div>
+    </li>
+    <li style="display: flex; justify-content: flex-start; align-items: center;">
+        <div>
+            <strong>AERO Engenharia</strong><br>
+            <strong>Função:</strong> Especialista de Geoprocessamento<br>
+            <strong>Atuação:</strong> Estruturação de dados GIS da empresa, automatização de processos com Python e R voltados para cadastro com PAEBM. Projetos envolvendo GIS e realização de Dashboard em R e Python para gestão de processos. Desenvolvimento de IA para identificação de focos de dengue com imagens de drone. Desenvolvimento de Sistema de WebGIS baseado em Geoserver e Geonode em servidor em nuvem.<br>
+            <strong>Período:</strong> 10/02/2025 até 01/10/2025
+        </div>
+    </li>
+    <li style="display: flex; justify-content: flex-start; align-items: center;">
+        <div>
             <strong>NMC Integrativa</strong><br>
             <strong>Função:</strong> Especialista de Geoprocessamento / Coordenação de Projetos<br>
-            <strong>Período:</strong> 04/06/2024 - Presente
+            <strong>Atuação:</strong> Estruturação de dados GIS da empresa, automatização de processos com Python e R voltados para cadastro com PAEBM. Projetos envolvendo GIS e realização de Dashboard em R e Python para gestão de processos, gestão de processos e planejamento de tarefas internas.<br>
+            <strong>Período:</strong> 04/06/2024 até 15/12/2024
         </div>
         <img src="data:image/png;base64,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" alt="Logo NMC" width="150" style="margin-left: 10px;">
     </li>
@@ -218,7 +245,7 @@ def mostrar_curriculo():
             <strong>Atuação:</strong> Prestação de serviço para a Fundação Renova nos programas 07 e 08 no reassentamento familiar.
         </div>
         <img src="https://lh3.googleusercontent.com/lSrRMNY3tolnT8AkKaY3ee6QZ4WrkSs1sLP8UtZpQSvdN2seU4lA6ZQzpr8YTTc0378jXzrHtytynw_tcDuLZLvHeiD1N4aWvffRXp5qNaOyC-F6=w1280" alt="Logo RAC" width="150" style="margin-left: 10px;">
-        <img src="https://www.fundacaorenova.org/wp-content/themes/fundacao-2016/web/assets/images/logo.svg" alt="Logo RAC" width="150" style="margin-left: 10px;">
+        <img src="https://www.fundacaorenova.org/wp-content/themes/fundacao-2016/web/assets/images/logo.svg" alt="Logo Fundação Renova" width="150" style="margin-left: 10px;">
     </li>
     <li style="display: flex; justify-content: flex-start; align-items: center;">
         <div>
@@ -237,6 +264,8 @@ def mostrar_curriculo():
         </div>
         <img src="https://www.upe.br/images/industrix/logo-nova4.png" alt="Logo UPE" width="80" style="margin-left: 10px;">
     </li>
+</ul>
+""", unsafe_allow_html=True)
     <li style="display: flex; justify-content: flex-start; align-items: center;">
         <div>
             <strong>Secretaria de Educação e Esporte de Pernambuco</strong><br>
@@ -346,40 +375,28 @@ def mostrar_portfolio():
     # Projetos
     projetos = [
         {
-            "titulo": "Desenvolvimento de Plataforma WebGIS Integrada",
-            "descricao": "Criação de uma plataforma WebGIS utilizando Python e Folium para análise geoespacial avançada, integrada com sistemas CRM para gerenciamento de clientes e vendas.",
-            "imagem": "https://via.placeholder.com/300x200.png?text=Projeto+1"
+            "titulo": "Desenvolvimento de Plataforma WebGIS com Mapbox e React",
+            "descricao": "Criação de uma plataforma WebGIS integrada utilizando React e Mapbox GL JS para análise geoespacial avançada, integrada com PostGIS e APIs RESTful para gerenciamento de dados espaciais.",
+            "tecnologias": "React, Mapbox GL JS, PostGIS, APIs REST"
         },
         {
-            "titulo": "Automatização de Processos com Python",
-            "descricao": "Desenvolvimento de scripts para automatização de tarefas repetitivas, integração de APIs e processamento em massa de dados geoespaciais.",
-            "imagem": "https://via.placeholder.com/300x200.png?text=Projeto+2"
+            "titulo": "Automatização de Processos com Python e R",
+            "descricao": "Desenvolvimento de scripts para automatização de tarefas repetitivas, integração de APIs e processamento em massa de dados geoespaciais. Implementação de pipelines de dados com Python e R.",
+            "tecnologias": "Python, R, GDAL, Pandas, GeoPandas"
         },
         {
-            "titulo": "Dashboard Interativo para Análise de Desempenho",
-            "descricao": "Criação de dashboards interativos utilizando Streamlit e Plotly para visualização de KPIs e métricas de desempenho em tempo real.",
-            "imagem": "./Imagem/1.png"
+            "titulo": "Dashboard Interativo e Análise de Dados Geoespaciais",
+            "descricao": "Criação de dashboards interativos utilizando Streamlit, R Shiny e Plotly para visualização de KPIs e métricas em tempo real, com foco em análise de dados geoespaciais.",
+            "tecnologias": "Streamlit, Plotly, R Shiny, QGIS, ArcGIS"
         }
     ]
     
     # Exibir projetos
-    for projeto in projetos:
-        st.markdown(f"<h2 class='subtitulo'>{projeto['titulo']}</h2>", unsafe_allow_html=True)
-        st.image(projeto['imagem'], use_column_width=True)
+    for idx, projeto in enumerate(projetos, 1):
+        st.markdown(f"<h2 class='subtitulo'>{idx}. {projeto['titulo']}</h2>", unsafe_allow_html=True)
         st.markdown(f"<p class='texto'>{projeto['descricao']}</p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='color: #666; font-size: 0.9em'><strong>Tecnologias:</strong> {projeto['tecnologias']}</p>", unsafe_allow_html=True)
         st.markdown("<hr>", unsafe_allow_html=True)
-
-        # Slideshow para o projeto "Dashboard Interativo"
-    if projeto['titulo'] == "Dashboard Interativo para Análise de Desempenho":
-        imagens_slideshow = [
-            "./Imagem/1.png",
-            "./Imagem/2.png",  # Adicione mais imagens conforme necessário
-        ]
-        
-        # Loop para exibir imagens do slideshow
-        for imagem in imagens_slideshow:
-            st.image(imagem, use_column_width=True)
-            time.sleep(2)  # Espera 2 segundos antes de passar para a próxima imagem
 
 # Função para Contato
 def mostrar_contato():

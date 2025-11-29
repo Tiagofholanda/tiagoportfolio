@@ -1,9 +1,10 @@
-pandas
-streamlit_lottie
-streamlit>=1.0
-pillow
-streamlit-lottie
-requests
-email-validator
-python-dotenv
+pandas>=2.0.0
+streamlit>=1.28.0
+streamlit-lottie>=0.0.5
+pillow>=10.0.0
+requests>=2.31.0
+email-validator>=2.1.0
+python-dotenv>=1.0.0
+plotly>=5.17.0
+
 
