@@ -26,3 +26,13 @@ PRODUÇÃO
 
 CAPACITAÇÕES
 • Aerofotogrametria aplicada à cartografia (UFPE), Programação em R para Geociências (UFF), Técnico em Geoprocessamento (IFSULDEMINAS).
+
+LINHAS DE PESQUISA
+• Morfodinâmica costeira e variação volumétrica de sedimentos.
+• Integração de séries temporais LiDAR/Drone para monitoramento de dunas.
+• Automação estatística em R para detecção de hotspots erosivos.
+
+IMPACTO CIENTÍFICO
+• Conteúdo citado em políticas públicas de monitoramento costeiro.
+• Participação em bancas, comitês técnicos e revisão para periódicos Qualis A/B.
+• Desenvolvimento de guias práticos e oficinas sobre drones na climatologia e gestão costeira.
