@@ -1,0 +1,5 @@
+WebGIS ponto a ponto com ortomosaicos subdecimétricos, dados cadastrais e camadas multilayer. Operado por mais de 600 prefeituras mineiras, serve como centro de supervisão territorial com mapas interativos, relatórios executivos parametrizáveis e exportação imediata de pontos/quadras.
+
+Disponibiliza editor vetorial em tela, marcação colaborativa, mapas de calor, filtros e buscas geolocalizadas, cálculo de rotas "porta a porta", preenchimento e validação de atributos no navegador, suporte offline-first e auditar trilhas de vistoria. Centraliza inventários espaciais, reduz retrabalho em campo e melhora a governança municipal.
+
+Os usuários conseguem importar lotes em shapefile/GeoJSON, aplicar regras de simbologia corporativa, gerar relatórios de conformidade, emitir ofícios automaticamente e acompanhar indicadores de produtividade de cada equipe. O módulo analítico produz mapas temáticos impressos, dashboards e painéis públicos, reforçando transparência e prestação de contas junto à população.

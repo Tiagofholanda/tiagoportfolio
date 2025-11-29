@@ -17,6 +17,18 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGENS_DIR = os.path.join(BASE_DIR, "Imagem")
 EXTENSOES_IMAGEM = (".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp")
 
+TITULOS_CUSTOMIZADOS = {
+    "agisoft": "Aerofotogrametria de Alta Precisão",
+    "artigos": "Publicações e Pesquisas Costeiras",
+    "gerenciamento de banco de dados espacial": "Sistema de Gestão de Atividades e Quadras",
+    "inconsistencias em banco de dados espacial": "Relatório de Inconsistências no Banco Espacial",
+    "topografia": "Gestão Topográfica e Plantio",
+    "webgis_2": "WebGIS de Auditoria de Aerolevantamentos",
+    "webgis_3": "WebGIS de Vigilância Epidemiológica",
+    "webgis_4": "WebGIS Municipal (600+ Prefeituras)",
+    "webgis_devgis": "Geoportal Corporativo DEVGIS",
+}
+
 # Configuração da página
 st.set_page_config(page_title="Portfólio de Tiago Holanda", page_icon="🌎", layout="wide")
 
@@ -68,7 +80,9 @@ def carregar_projetos_locais(caminho_base):
         if not imagens:
             continue
 
-        titulo = pasta.replace("_", " ").title()
+        slug = pasta.lower()
+        titulo = TITULOS_CUSTOMIZADOS.get(slug, pasta.replace("_", " ").title())
+
         descricao = _gerar_descricao_projeto(caminho_projeto, titulo, len(imagens))
 
         projetos.append(
@@ -91,12 +105,12 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
     :root {
-        --bg-color: #0f172a;
-        --card-bg: rgba(15,23,42,0.6);
-        --accent: #3b82f6;
-        --accent-light: #93c5fd;
-        --text-light: #f8fafc;
-        --muted: #94a3b8;
+        --bg-color: #f5f6fa;
+        --card-bg: #ffffff;
+        --accent: #1d4ed8;
+        --accent-light: #3b82f6;
+        --text-light: #0f172a;
+        --muted: #475569;
     }
 
     html, body, [class*="css"]  {
@@ -140,7 +154,7 @@ st.markdown("""
         background-color: var(--card-bg);
         padding: 24px;
         border-radius: 14px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
     }
 
     .icone-rede {
@@ -152,7 +166,8 @@ st.markdown("""
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        background: rgba(59,130,246,0.1);
+        background: rgba(59,130,246,0.12);
+
         padding: 10px;
         border-radius: 12px;
         transition: transform 0.2s ease;
@@ -166,10 +181,10 @@ st.markdown("""
     }
 
     .hero {
-        background: linear-gradient(135deg, rgba(59,130,246,0.25), rgba(14,165,233,0.15));
+        background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(14,165,233,0.08));
         padding: 40px;
         border-radius: 24px;
-        box-shadow: 0 20px 50px rgba(2,6,23,0.4);
+        box-shadow: 0 20px 50px rgba(15,23,42,0.12);
         margin-bottom: 30px;
     }
 
@@ -192,8 +207,9 @@ st.markdown("""
         display: inline-block;
         padding: 12px 28px;
         border-radius: 999px;
-        border: 1px solid rgba(148,163,184,0.4);
-        color: var(--text-light) !important;
+        border: 1px solid rgba(148,163,184,0.6);
+        color: var(--text-light)!
+ !important;
         font-weight: 600;
         transition: border 0.2s ease, transform 0.2s ease;
     }
@@ -212,8 +228,8 @@ st.markdown("""
 
     .portfolio-badge {
         display: inline-flex;
-        background: rgba(99,102,241,0.15);
-        color: var(--accent-light);
+        background: rgba(99,102,241,0.1);
+        color: var(--accent);
         border-radius: 999px;
         padding: 6px 14px;
         font-size: 0.85em;
@@ -299,7 +315,7 @@ def mostrar_curriculo():
     with col2:
         st.markdown('<h2 class="subtitulo">Resumo Profissional</h2>', unsafe_allow_html=True)
         st.markdown("""
-        <p class="texto">
+        <p class="texto" style="color:#000000;">
             Especialista em Geoprocessamento, Sistemas WebGIS e Análise de Dados, com atuação em desenvolvimento de soluções espaciais, automação de processos com Python e R, integração de bancos PostGIS e visualização de dados em plataformas como Streamlit, Power BI e React/Mapbox. Experiência comprovada em projetos para setores público e privado, além de sólida produção acadêmica e atividades de docência.
         </p>
         """, unsafe_allow_html=True)
@@ -453,15 +469,7 @@ def mostrar_portfolio():
         st.info("Adicione imagens em subpastas dentro da pasta 'Imagem' para mostrar os projetos automaticamente.")
         return
 
-    projetos_por_pagina = 3
-    total_paginas = (len(projetos) + projetos_por_pagina - 1) // projetos_por_pagina
-    pagina = st.number_input("Página", min_value=1, max_value=max(1, total_paginas), value=1, step=1)
-
-    inicio = (pagina - 1) * projetos_por_pagina
-    fim = inicio + projetos_por_pagina
-    projetos_pagina = projetos[inicio:fim]
-
-    for projeto in projetos_pagina:
+    for projeto in projetos:
         with st.container():
             st.markdown("""
                 <div class="texto" style="background-color: var(--secondary-background-color, #f5f5f5); padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 25px;">

@@ -1,0 +1,5 @@
+Plataforma WebGIS de vigilância municipal que integra dados via APIs externas (GeoJSON, REST, sensores IoT e formulários móveis). Centraliza armadilhas de mosquitos, ocorrências epidemiológicas, clima e indicadores socioambientais em um painel único.
+
+Entrega mapas de calor parametrizáveis, dashboards dinâmicos, automação de alertas por limiar, priorização de tratamento por bairro, análises temporais e exportação de planos de ação. A solução cria inteligência geoespacial em tempo real para as equipes de saúde pública, reduz o tempo de resposta aos focos e melhora a eficiência das campanhas de combate a arboviroses.
+
+Os workflows contemplam checklists em campo, sincronização offline, consolidação automática de indicadores e disparo de comunicações para equipes operacionais. Também há trilha de auditoria, histórico de intervenções por armadilha, integração com laboratórios e relatórios padronizados para secretarias municipais e órgãos estaduais.

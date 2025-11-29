@@ -1,0 +1,3 @@
+Projeto de gerenciamento topográfico e de plantio de árvores em propriedade rural. Combina levantamento planialtimétrico, análise de relevo e zoneamento produtivo para orientar o manejo da fazenda.
+
+O sistema monitora implantação de mudas, curvas de nível, drenagem, estradas internas e áreas de preservação. Cada campanha gera MDT/MDS, mapas temáticos de fertilidade, cadernos de campo e relatórios fotográficos. Dashboards acompanham produtividade por talhão, estoque de mudas e indicadores de conservação do solo, garantindo rastreabilidade das atividades e decisões técnicas baseadas em dados geoespaciais.

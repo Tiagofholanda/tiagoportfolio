@@ -1,0 +1,5 @@
+WebGIS criado para auditoria técnica e comparação de aerolevantamentos em Minas Gerais. Centraliza ortomosaicos, MDT/MDS, nuvens de pontos e relatórios topográficos, permitindo confrontar campanhas por período/região e medir a conformidade das entregas.
+
+Possui modo "overlay" com sliders de transparência, análise estatística de resíduos, geração automática de indicadores de qualidade, trilhas de revisão e anexação de evidências capturadas por drones. O ambiente reduz o ciclo de validação, dá rastreabilidade às aprovações e suporta decisões contratadas com base em métricas objetivas.
+
+Os avaliadores acessam camadas históricas, aplicam filtros por fornecedor/ordem de serviço, registram pareceres técnicos e exportam relatórios consolidados em PDF ou GeoPackage. Painéis de governança exibem SLA de análise, conformidade média, desvios por equipe e backlog de auditorias, garantindo transparência do processo e base documental para auditorias regulatórias.
